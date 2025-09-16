@@ -70,18 +70,6 @@ The dataset used is a **Mental Health Survey dataset**.
 
 **Live App**: [Depression Indicator App](https://ishaaq09-depression-indicator-app-app-qngzxe.streamlit.app/)  
 
-
-
-## Results & Metrics  
-- **Accuracy**: ~XX% (update with actual number)  
-- **Precision**: ~XX%  
-- **Recall**: ~XX%  
-- **F1-Score**: ~XX%  
-
-*(Replace with your actual evaluation output after training)*  
-
-
-
 ## Business Use Cases  
 1. **Healthcare Providers** → Identify at-risk patients early.  
 2. **Mental Health Clinics** → Support data-driven treatment plans.  
