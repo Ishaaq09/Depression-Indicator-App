@@ -21,9 +21,17 @@ city = st.selectbox("City", [
 ])
 status = st.selectbox("Are you a Working Professional or Student?", ["Working Professional", "Student"])
 profession = st.selectbox("Profession", [
-    'Chef', 'Teacher', 'Business Analyst', 'Software Engineer',
-    'Data Scientist', 'Accountant', 'Designer', 'Pharmacist',
-    'Architect', 'Consultant', 'Lawyer', 'Doctor'
+    'Chef', 'Teacher', 'Business Analyst', 'Financial Analyst',
+    'Chemist', 'Electrician', 'Software Engineer', 'Data Scientist',
+    'Plumber', 'Marketing Manager', 'Accountant', 'Entrepreneur',
+    'HR Manager', 'UX/UI Designer', 'Content Writer',
+    'Educational Consultant', 'Civil Engineer', 'Manager',
+    'Pharmacist', 'Architect', 'Mechanical Engineer', 'Customer Support',
+    'Consultant', 'Judge', 'Researcher', 'Pilot', 'Graphic Designer',
+    'Travel Consultant', 'Digital Marketer', 'Lawyer',
+    'Research Analyst', 'Sales Executive', 'Doctor',
+    'Unemployed', 'Investment Banker', 'Family Consultant',
+    'Medical Doctor', 'Working Professional', 'Student'
 ])
 work_study_hours = st.slider("Work/Study Hours", 0, 20, 8)
 work_pressure_var = st.slider("Work Pressure (0-5)", 0, 5, 2)
@@ -35,8 +43,10 @@ financial_stress = float(financial_stress_var)
 sleep_duration = st.selectbox("Sleep Duration", ['Less than 5 hours','5-6 hours','6-7 hours','7-8 hours','More than 8 hours'])
 dietary_habits = st.selectbox("Dietary Habits", ["Healthy", "Unhealthy", "Moderate"])
 degree = st.selectbox("Degree", [
-    "B.Tech", "M.Tech", "MBA", "PhD", "B.Sc", "M.Sc", "B.Com", "M.Com",
-    "MCA", "BBA", "MBBS", "LLB", "LLM", "M.Ed", "B.Ed", "M.Pharm", "B.Pharm"
+    'BHM', 'LLB', 'B.Pharm', 'BBA', 'MCA', 'MD', 'B.Sc', 'M.Tech',
+    'B.Arch', 'BCA', 'BE', 'MA', 'B.Ed', 'B.Com', 'MBA', 'M.Com',
+    'MHM', 'BA', 'Class 12', 'PhD', 'M.Ed', 'M.Sc', 'B.Tech', 'LLM',
+    'MBBS', 'M.Pharm', 'MPA', 'BH', 'M.Arch', 'BPA', 'ACA', 'LHM', 'HCA'
 ])
 suicidal_thoughts = st.selectbox("Ever had suicidal thoughts?", ["Yes", "No"])
 family_history = st.selectbox("Family History of Mental Illness?", ["Yes", "No"])

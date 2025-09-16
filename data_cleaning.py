@@ -24,15 +24,26 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     ]
 
     profession_corrections = {
-        "Finanancial Analyst": "Financial Analyst",  # common spelling mistake
-        "UX/UI Designer": "Designer",
-        "Research Analyst": "Analyst"
+        "Finanancial Analyst": "Financial Analyst",
+        "Research Analyst": "Research Analyst",   
+        "UX/UI Designer": "UX/UI Designer",       
+        "Analyst": "Research Analyst",            
+        "Designer": "UX/UI Designer"              
     }
     df['Profession'] = df['Profession'].replace(profession_corrections)
+
     valid_professions = [
-        "Software Engineer", "Doctor", "Teacher", "Lawyer", "Business Analyst",
-        "Chef", "Engineer", "Nurse", "Accountant", "Data Scientist", "Journalist",
-        "Consultant", "Architect", "Pharmacist", "Dentist", "Designer", "Scientist"
+        'Chef', 'Teacher', 'Business Analyst', 'Financial Analyst',
+        'Chemist', 'Electrician', 'Software Engineer', 'Data Scientist',
+        'Plumber', 'Marketing Manager', 'Accountant', 'Entrepreneur',
+        'HR Manager', 'UX/UI Designer', 'Content Writer',
+        'Educational Consultant', 'Civil Engineer', 'Manager',
+        'Pharmacist', 'Architect', 'Mechanical Engineer', 'Customer Support',
+        'Consultant', 'Judge', 'Researcher', 'Pilot', 'Graphic Designer',
+        'Travel Consultant', 'Digital Marketer', 'Lawyer',
+        'Research Analyst', 'Sales Executive', 'Doctor',
+        'Unemployed', 'Investment Banker', 'Family Consultant',
+        'Medical Doctor', 'Working Professional', 'Student'
     ]
 
     sleep_corrections = {
@@ -57,15 +68,38 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
     degree_corrections = {
         "MTech": "M.Tech",
-        "B.Sc": "B.Sc",
+        "M_Tech": "M.Tech",
+        "S.Tech": "M.Tech",
+        "E.Tech": "M.Tech",
+        "ME": "M.Tech",
+        "BTech": "B.Tech",
+        "B.Tech.": "B.Tech",
+        "BSc": "B.Sc",
         "MSc": "M.Sc",
-        "B.Ed": "B.Ed",
-        "M.Ed": "M.Ed"
+        "M.S": "M.Sc",
+        "BPharm": "B.Pharm",
+        "MPharm": "M.Pharm",
+        "N.Pharm": "M.Pharm",
+        "S.Pharm": "M.Pharm",
+        "P.Pharm": "M.Pharm",
+        "H_Pharm": "B.Pharm",
+        "L.Ed": "B.Ed",
+        "BEd": "B.Ed",
+        "MEd": "M.Ed",
+        "LLEd": "LLB",       
+        "LLTech": "LLB",      
+        "LL BA": "LLB",
+        "LL B.Ed": "LLB",
+        "BArch": "B.Arch",
+        "B.B.Arch": "B.Arch",
+        "S.Arch": "M.Arch"
     }
     df['Degree'] = df['Degree'].replace(degree_corrections)
     valid_degrees = [
-        "B.Tech", "M.Tech", "MBA", "PhD", "B.Sc", "M.Sc", "B.Com", "M.Com",
-        "MCA", "BBA", "MBBS", "LLB", "LLM", "M.Ed", "B.Ed", "M.Pharm", "B.Pharm"
+        'BHM', 'LLB', 'B.Pharm', 'BBA', 'MCA', 'MD', 'B.Sc', 'M.Tech',
+        'B.Arch', 'BCA', 'BE', 'MA', 'B.Ed', 'B.Com', 'MBA', 'M.Com',
+        'MHM', 'BA', 'Class 12', 'PhD', 'M.Ed', 'M.Sc', 'B.Tech', 'LLM',
+        'MBBS', 'M.Pharm', 'MPA', 'BH', 'M.Arch', 'BPA', 'ACA', 'LHM', 'HCA'
     ]
 
     df['City'] = df['City'].apply(lambda x: x if str(x).strip() in valid_cities else np.nan)
